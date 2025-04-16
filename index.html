@@ -146,7 +146,7 @@
           )[0];
 
           if (!thisTable) {
-            window.location.href = "/?page=1";
+            window.location.href = "/tableproject/?page=1";
           }
 
           for (i = 0; i < thisTable.length; i++) {
@@ -163,7 +163,7 @@
           pagination.innerHTML = `<a href="" class="prev">Prev</a>`;
 
           for (i = 0; i < tableData.length; i++) {
-            pagination.innerHTML += `<a href="?page=${i + 1}" class="pag pag-${
+            pagination.innerHTML += `<a href="/tableproject/?page=${i + 1}" class="pag pag-${
               i + 1
             }">${i + 1}</a>`;
           }
@@ -175,12 +175,12 @@
             .classList.add("active");
           pagination.innerHTML += `<a href="#" class="next">Next</a>`;
           function nextPage() {
-            window.location.href = `/?page=${
+            window.location.href = `/tableproject/?page=${
               URLSearchParams(window.location.search).get("page") + 1
             }`;
           }
           function prevPage() {
-            window.location.href = `/?page=${
+            window.location.href = `/tableproject/?page=${
               URLSearchParams(window.location.search).get("page") - 1
             }`;
           }
